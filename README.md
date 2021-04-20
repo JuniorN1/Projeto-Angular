@@ -52,7 +52,7 @@ após isso basta abrir a aplicação e testar
 
 #### caso não tenha o docker instalado na sua máquina voce pode tambem optar por instalar sem o uso do docker para isso deve ter o ambiente com node js instalado 
 
-###### Windows:
+##### Windows:
     no windows se torna relativamente simples pois basta baixar e executar o node.exe que você pode baixar no site oficial
     
 https://nodejs.org/en/
@@ -89,7 +89,7 @@ adicionar cidades na tebela cidade:
 pronto o banco já está configurado e pronto para o uso
 
 
-###### Linux:
+##### Linux:
     no linux e um pouco mais complexo pois as instalações serão mais via comando:
     primeiro abra o terminal e execute: 
     ```sudo apt install nodejs ```
@@ -116,7 +116,7 @@ sudo apt-get -y install postgres```
 para mais detalhes :
 https://www.postgresql.org/download/linux/ubuntu/
 ```
-windows e linux
+##### windows e linux
 
 após instalarmos tudo podemos dar o próximo passo 
 e rodar o 
