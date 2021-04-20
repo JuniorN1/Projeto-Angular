@@ -2,6 +2,12 @@
 
 Projeto
 
+Video configuração com Docker:
+    https://www.youtube.com/watch?v=qk0cappjX8o
+    
+Video configuração somente o Banco:
+    https://www.youtube.com/watch?v=tS3F41g222c
+
 iniciando o projeto execute o comando 
 
 ```git clone  https://github.com/JuniorN1/Projeto-Angular.git```
