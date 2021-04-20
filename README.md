@@ -1,6 +1,6 @@
 # Projeto-Angular
 
-#### Projeto
+#### Projeto Imagens
 
 <div style="display:flex; flex-direction:row; width="20%"">
    <img src="https://i.imgur.com/QVQNY2I.png" style="left:2%;" width="30%"/>
@@ -15,7 +15,10 @@
 #### Vídeo Configuração do Projeto Com Docker Compose:
    https://www.youtube.com/watch?v=qk0cappjX8o
 
-iniciando o projeto execute o comando 
+
+#### Documentação 
+
+##### iniciando o projeto execute o comando 
 
 ```git clone  https://github.com/JuniorN1/Projeto-Angular.git```
 
