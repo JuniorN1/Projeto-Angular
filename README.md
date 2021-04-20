@@ -12,8 +12,6 @@
 
 
 
-#### Vídeo Configuração do Projeto Com Docker Compose:
-   https://www.youtube.com/watch?v=qk0cappjX8o
 
 
 #### Documentação 
