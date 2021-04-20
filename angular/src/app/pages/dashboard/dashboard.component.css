@@ -1,0 +1,87 @@
+
+      .container{
+          overflow-x: hidden;
+          overflow-y: auto;
+          height: 100%;
+      }
+      .send-request {
+        margin-bottom: 16px;
+      }
+
+      .send-request span {
+        margin-left: 8px;
+      }
+      .search-box {
+        padding: 8px;
+      }
+
+      .search-box input {
+        width: 188px;
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      .search-box button {
+        width: 90px;
+      }
+
+      .search-button {
+        margin-right: 8px;
+      }
+
+      .save {
+        margin-right: 8px;
+      }
+
+      .monitorar-contratos-container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+      }
+      .vence-item{
+        margin-right: 2%;
+        padding: 2%;
+        border-radius:2% ;
+       
+      }
+      .vence-item p{
+        font-size: 1rem;
+        font-weight: bolder;
+      }
+      .vence-total{
+        font-size: 15px;
+        font-weight: bolder;
+      }
+
+      nz-progress {
+        margin-right: 1%;
+        margin-bottom:1%;
+        display: inline-block;
+      }
+      .container-charts{
+        display: flex;
+        flex-direction: column;
+        
+        width: 100%;
+      }
+      .chart-dough{
+        display: block;
+        width: 100%;
+        align-items: center;
+      }
+      .container-progress-bar{
+        display: flex;
+        flex-direction: row;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+      .progress-bar{
+        margin-top: 3%;
+        margin-bottom: 3%;
+        margin-right: 2%;
+        width: 15;
+        display: flex;
+        flex-direction: column;
+    
+      }

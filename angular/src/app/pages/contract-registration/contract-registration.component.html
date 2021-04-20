@@ -1,0 +1,105 @@
+<div class="container">
+    <br>
+    <h1>Cadastrar Novo Prestador</h1>
+    <br>
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+        <nz-form-item>
+            <nz-form-label  
+                [nzSm]="0" [nzXs]="60"
+                nzRequired nzFor="selectCpfCnpj"  
+                nzTooltipTitle="A lista de todos os Cpfs e Cnpjs cadastrados no sistema"
+            >
+            <span>Lista de CPF / CNPJ:</span>
+            </nz-form-label>
+            <nz-form-control nzErrorTip="Por Favor selecione um Cnpj ou Cpf!">
+                <nz-select 
+                    nzShowSearch 
+                    nzAllowClear 
+                    (ngModelChange)="selectCpf($event)"
+                    nzPlaceHolder="Busquer por cpf ou cnpj" 
+                    [(ngModel)]="contrato.prestador_id"
+                    id="selectCpfCnpj" formControlName="selectCpfCnpj" 
+                >
+                    <nz-option 
+                        *ngFor="let cpf  of dados_prestador"
+                        nzCustomContent 
+                        nzLabel={{cpf.cpf_cnpj}}
+                        nzValue={{cpf.prestador_id}}
+                    >
+                        {{cpf.cpf_cnpj}}
+                    </nz-option>
+                </nz-select>
+            </nz-form-control>
+        </nz-form-item>   
+        <nz-form-item>
+            <nz-form-label   
+                nzRequired     
+            >
+            <span>Razão Social:</span>
+            </nz-form-label>
+            <nz-form-control nzErrorTip="Razão Social!">
+                <input 
+                    nz-input 
+                    placeholder="Razão Social"
+                    value={{razaoSocial}}
+                    readonly
+                />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label   
+                nzRequired nzFor="service"  
+                nzTooltipTitle="Informe o serviço prestado"
+            >
+            <span>Serviço Prestado:</span>
+            </nz-form-label>
+            <nz-form-control nzErrorTip="Por Favor selecione um Cnpj ou Cpf!">
+                <input 
+                    nz-input 
+                    placeholder="Serviços"
+                    [(ngModel)]="contrato.servico_prestado"
+                    id="service" 
+                    formControlName="service" 
+                />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label   
+                nzRequired nzFor="dataInicio"  
+                nzTooltipTitle="Informe a data de Inicio"
+            >
+            <span>Data Inicio:</span>
+            </nz-form-label>
+            <nz-form-control nzErrorTip="Por Favor selecione a data de inicio!">
+                <nz-date-picker 
+                    [(ngModel)]="contrato.data_inicio" 
+                    id="dataInicio" 
+                    formControlName="dataInicio" 
+                >
+                </nz-date-picker>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label   
+                nzRequired nzFor="dataFinal"  
+                nzTooltipTitle="Informe a data Final"
+            >
+            <span>Data Final:</span>
+            </nz-form-label>
+            <nz-form-control nzErrorTip="Por Favor selecione a data de inicio!">
+                <nz-date-picker 
+                    [(ngModel)]="contrato.data_fim" 
+                    id="dataFinal" 
+                    formControlName="dataFinal" 
+                >
+                </nz-date-picker>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item nz-row class="register-area">
+            <nz-form-control [nzSpan]="14" [nzOffset]="6">
+            <button nz-button nzType="primary" >Register</button>
+            </nz-form-control>
+        </nz-form-item>
+
+    </form>
+  </div>

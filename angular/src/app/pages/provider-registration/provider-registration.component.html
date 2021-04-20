@@ -1,0 +1,275 @@
+<div class="container">
+    <br>
+    <h1>Cadastrar Novo Prestador</h1>
+    <nz-spin   [nzSpinning]="isVisible">  
+    </nz-spin>
+    <br>
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+        <div class="container-items">
+            <nz-form-item>
+                <nz-form-label  
+                    [nzSm]="0" 
+                    [nzXs]="60"
+                    nzRequired 
+                    nzFor="tipo"  
+                    nzTooltipTitle="Existem 2 tipos de prestador de servicos o pf(pessoa fisica) e o pj(pessoa juridica)"
+                >
+                <span>Tipo</span>
+                </nz-form-label>
+                <nz-form-control nzErrorTip="Selecione o tipo de Prestador!">
+                    <nz-select 
+                        nzShowSearch 
+                        nzAllowClear                 
+                        nzPlaceHolder="Busquer por pf ou pj" 
+                        [(ngModel)]="prestador.tipo"
+                        id="tipo" formControlName="tipo" 
+                    >
+                        <nz-option                    
+                            nzCustomContent 
+                            nzLabel="Pessoa Fisica"
+                            nzValue="pf"
+                        >
+                            Pessoa Fisica
+                        </nz-option>
+                        <nz-option                    
+                            nzCustomContent 
+                            nzLabel="Pessoa Juridica"
+                            nzValue="pj"
+                        >   
+                            Pessoa Juridica
+                        </nz-option>
+                    </nz-select>
+                </nz-form-control>
+            </nz-form-item> 
+            <nz-form-item>
+                <nz-form-label  
+                    nzRequired 
+                    nzFor="cpf_cnpj"  
+                    nzTooltipTitle="De acordo com o tipo de prestador devese usar o cpf ou cnpj"
+
+                >
+                    <span>Cpf ou Cnpj</span>
+                </nz-form-label>
+                <nz-form-control nzErrorTip="Informar o cpf ou cnpj!">
+                    <input 
+                        id="cpf_cnpj" formControlName="cpf_cnpj" 
+                        [(ngModel)]="prestador.cpf_cnpj"
+                        nz-input 
+                        placeholder="cpf ou cnpj"
+                        
+                    />
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+        <div class="container-items">
+            <nz-form-item>
+        
+                <nz-form-label  
+                nzRequired 
+                nzFor="nome_razao_social"  
+                nzTooltipTitle="Razão Social do prestador"
+            >
+                <span>Razão Social</span>
+            </nz-form-label>
+                <nz-form-control nzErrorTip="Informar a Razão Social!">
+                    <input 
+                        id="nome_razao_social"
+                        formControlName="nome_razao_social" 
+                        nz-input 
+                        placeholder="Razão Social"
+                        [(ngModel)]="prestador.nome_razao_social"
+                        
+                    />
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label   
+                    nzRequired
+                    nzFor="email" 
+                    nzTooltipTitle="E-mail do prestador"
+                >
+                <span>E-mail</span>
+                </nz-form-label>
+                <nz-form-control nzErrorTip="Informar o E-mail!">
+                    <input 
+                        id="email" 
+                        formControlName="email" 
+                        [(ngModel)]="prestador.email"
+                        nz-input 
+                        placeholder="E-mail exemple teste@gmail.com"
+                        
+                    />
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+        <div class="container-items">
+            <nz-form-item>
+                <nz-form-label   
+                    nzRequired nzFor="cep"  
+                    nzTooltipTitle="Informe o cep"
+                >
+                <span>Cep</span>
+                </nz-form-label>
+                <nz-form-control nzErrorTip="Busca Cep!">
+                    <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+                        <input
+                            [(ngModel)]="prestador.cep"
+                            id="cep" 
+                            formControlName="cep" 
+                            type="text" 
+                            nz-input 
+                            placeholder="Buscar Cep" 
+                        />
+                      </nz-input-group>
+                      <ng-template #suffixIconButton>
+                        <button 
+                        (click)="buscarCep()"
+                        type="button"
+                        nz-button nzType="primary" 
+                         nzSearch><i nz-icon nzType="search"></i></button>
+                      </ng-template>
+              
+                </nz-form-control>
+
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label   
+                    nzRequired nzFor="logradouro"  
+                    nzTooltipTitle="Informe o Logradouro"
+                >
+                <span>Logradouro</span>
+                </nz-form-label>
+                <nz-form-control nzErrorTip="Logradouro!">
+                    <input 
+                        nz-input 
+                        placeholder="Logradouro"
+                        [(ngModel)]="prestador.logradouro"
+                        id="logradouro" 
+                        formControlName="logradouro" 
+                    />
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+        <div class="container-items">
+            <nz-form-item>
+                <nz-form-label   
+                    nzRequired nzFor="numero"  
+                    nzTooltipTitle="Informe o Numero"
+                >
+                <span>Número</span>
+                </nz-form-label>
+                <nz-form-control nzErrorTip="Informe o Numero!">
+                    <input 
+                        nz-input 
+                        placeholder="Numero"
+                        [(ngModel)]="prestador.numero"
+                        id="numero" 
+                        formControlName="numero" 
+                    />
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label   
+                    nzRequired nzFor="complemento"  
+                    nzTooltipTitle="Informe o Complemento"
+                >
+                <span>Complemento</span>
+                </nz-form-label>
+                <nz-form-control nzErrorTip="Complemento!">
+                    <input 
+                        nz-input 
+                        placeholder="Logradouro"
+                        [(ngModel)]="prestador.complemento"
+                        id="complemento" 
+                        formControlName="complemento" 
+                    />
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+        <div class="container-items">
+            <nz-form-item>
+                <nz-form-label   
+                    nzRequired nzFor="bairro"  
+                    nzTooltipTitle="Informe o Bairro"
+                >
+                <span>Bairro</span>
+                </nz-form-label>
+                <nz-form-control nzErrorTip="Preencha o Campo Bairro!">
+                    <input 
+                        nz-input 
+                        placeholder="Bairro"
+                        [(ngModel)]="prestador.bairro"
+                        id="bairro" 
+                        formControlName="bairro" 
+                    />
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label  
+                    [nzSm]="0" [nzXs]="60"
+                    nzRequired nzFor="cidade"  
+                    nzTooltipTitle="Selecione a cidade"
+                >
+                <span>Cidade</span>
+                </nz-form-label>
+                <nz-form-control nzErrorTip="Selecione a cidade!">
+                    <nz-select 
+                        nzShowSearch 
+                        nzAllowClear 
+            
+                        nzPlaceHolder="Busquer a Cidade" 
+                        [(ngModel)]="prestador.cidade_id"
+                        id="cidade" formControlName="cidade" 
+                    >
+                        <nz-option  
+                            *ngFor="let cidade  of cidades"                    
+                            nzCustomContent 
+                            nzLabel={{cidade.cidade}}
+                            nzValue={{cidade.cidade_id}}
+                        >
+                        {{cidade.cidade}}
+                        </nz-option>
+                      
+                    </nz-select>
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+        <div class="container-items">
+            <nz-form-item>
+                <nz-form-label  
+                    [nzSm]="0" [nzXs]="60"
+                    nzRequired nzFor="uf"  
+                    nzTooltipTitle="Busque o Estado"
+                >
+                <span>Uf:</span>
+                </nz-form-label>
+                <nz-form-control nzErrorTip="Selecione o Estado!">
+                    <nz-select 
+                        nzShowSearch 
+                        nzAllowClear 
+                    
+                        nzPlaceHolder="Selecione o Estado" 
+                        [(ngModel)]="prestador.uf_id"
+                        id="uf" formControlName="uf" 
+                    >
+                        <nz-option    
+                            *ngFor="let uf  of ufs"                
+                            nzCustomContent 
+                            nzLabel={{uf.uf}}
+                            nzValue={{uf.uf_id}}
+                        >
+                        {{uf.uf}}
+                        </nz-option>
+                       
+                    </nz-select>
+                </nz-form-control>
+            </nz-form-item>  
+            </div>
+        <nz-form-item nz-row class="register-area">
+            <nz-form-control [nzSpan]="14" [nzOffset]="6">
+            <button nz-button nzType="primary" >Register</button>
+            </nz-form-control>
+        </nz-form-item>
+
+    </form>
+</div>
