@@ -38,7 +38,7 @@ adicionar estados na tabela uf:
 adicionar cidades na tebela cidade:
 ```
     Rafael Fernandes
-    João Pessoas
+    João Pessoa
    ```
 e também temos que cadastrar o usuário para funcionalidade de autenticação do jwt , embora o projeto não tenha uma tela de login, como informado, somente 3 telas, é necessário criar um usuário na tabela de usuários deixarei um token global pré definido sem criptografia para facilitar a configuração , 
     ``` usuário: junior
@@ -86,7 +86,7 @@ adicionar estados na tabela uf:
 adicionar cidades na tebela cidade:
 ```
     Rafael Fernandes
-    João Pessoas
+    João Pessoa
    ```
 pronto o banco já está configurado e pronto para o uso
 
