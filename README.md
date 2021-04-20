@@ -50,9 +50,7 @@ após isso basta abrir a aplicação e testar
 
 
 
-caso não tenha o docker instalado na sua máquina
-voce pode tambem optar por instalar sem o uso do docker 
-para isso deve ter o ambiente com node js instalado 
+#### caso não tenha o docker instalado na sua máquina voce pode tambem optar por instalar sem o uso do docker para isso deve ter o ambiente com node js instalado 
 
 Windows:
     no windows se torna relativamente simples pois basta baixar e executar o node.exe que você pode baixar no site oficial
