@@ -1,10 +1,19 @@
 # Projeto-Angular
 
-Projeto
+#### Projeto
 
-Vídeo Configuração do Projeto Com Docker Compose:
+<div style="display:flex; flex-direction:row; width="20%"">
+   <img src="https://i.imgur.com/QVQNY2I.png" style="left:2%;" width="30%"/>
+   <img src="https://i.imgur.com/POtNImR.png"  width="30%"/>
+   <img src="https://i.imgur.com/Y79tGkP.png"  width="30%"/>
+<!--    <img src="https://i.imgur.com/dZqKSio.png"  width="30%"/>
+   <img src="https://i.imgur.com/kwkmKTa.png"  width="30%"/> -->
+ </div>
+
+
+
+#### Vídeo Configuração do Projeto Com Docker Compose:
    https://www.youtube.com/watch?v=qk0cappjX8o
-
 
 iniciando o projeto execute o comando 
 
