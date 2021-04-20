@@ -37,6 +37,8 @@ usuario:   test
 senha:     test
 banco:     test
 ```
+#### video configuração do banco
+https://www.youtube.com/watch?v=tS3F41g222c
 
 adicionar estados na tabela uf: 
 ```
@@ -77,6 +79,8 @@ usuario:   test
 senha:     test
 banco:     test
 ```
+#### video configuração do banco
+https://www.youtube.com/watch?v=tS3F41g222c
 
 estão na tabela usuario deve se cadastrar o seguinte usuário para validar a nossa jwt predefinida já que não foi necessário criar tela de login para o projeto:
 na tabela usuario:
