@@ -103,8 +103,9 @@ pronto o banco já está configurado e pronto para o uso
 
 
 ##### Linux:
-    no linux e um pouco mais complexo pois as instalações serão mais via comando:
-    primeiro abra o terminal e execute: 
+
+   no linux e um pouco mais complexo pois as instalações serão mais via comando:
+   primeiro abra o terminal e execute: 
     ```sudo apt install nodejs ```
 
 verifique agora se tudo deu certo e o node foi instalado com o comando no terminal:
@@ -124,11 +125,11 @@ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 
 sudo apt-get update
-sudo apt-get -y install postgres```
-
-para mais detalhes :
-https://www.postgresql.org/download/linux/ubuntu/
+sudo apt-get -y install postgres
 ```
+##### para mais detalhes :
+ https://www.postgresql.org/download/linux/ubuntu/
+
 ##### windows e linux
 
 após instalarmos tudo podemos dar o próximo passo 
