@@ -23,7 +23,7 @@
 após executar o comando ```git clone ``` va na pasta do projeto
 
 abra o terminal ou powershell e execute o seguinte comando 
-para o sistema linux:
+para o sistema:
     ```sudo docker-composer up --build```
 após ele ira baixas os recursos necessarios e subir os containers poderar demorar um pouco para concluir a tarefa apos isso verifique se está tudo ok para podermos continuar!
 podemos testar acessando o localhost:3333 para o back-end e o localhost:4200 para o front-end devese apresenta as telas
